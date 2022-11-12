@@ -1,0 +1,242 @@
+{
+    "columns": [
+        "Progress",
+        "Finished",
+        "UserLanguage",
+        "Q37",
+        "Q39",
+        "Q1",
+        "Q1_6_TEXT",
+        "Q1.1",
+        "Q3",
+        "Q4",
+        "Q10_1",
+        "Q10_2",
+        "Q10_3",
+        "Q40_1",
+        "Q40_2",
+        "Q_40_3",
+        "Q44",
+        "Q11",
+        "Q18",
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q22",
+        "Q23",
+        "Q24",
+        "Q25",
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q5",
+        "Q6",
+        "Q7",
+        "Q8",
+        "Q9",
+        "Q32",
+        "Q36",
+        "Q35",
+        "Q34",
+        "Q33",
+        "Q15",
+        "Q16",
+        "Q14"
+    ],
+    "rows": 50,
+    "cols": 45,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Progress": [
+            "constant_column"
+        ],
+        "Finished": [
+            "constant_column"
+        ],
+        "UserLanguage": [
+            "constant_column"
+        ],
+        "Q37": [
+            "constant_column"
+        ],
+        "Q39": [
+            "constant_column"
+        ],
+        "Q1": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q1_6_TEXT": [
+            "empty_column"
+        ],
+        "Q1.1": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q3": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q4": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q10_1": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q10_2": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q10_3": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q40_1": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q40_2": [
+            "categorical",
+            "many_categories"
+        ],
+        "Q_40_3": [
+            "categorical",
+            "many_categories"
+        ],
+        "Q44": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q11": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q18": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q19": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q20": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q21": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q22": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q23": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q24": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q25": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q26": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q27": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q28": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q29": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q30": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q31": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q5": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q6": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q7": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q8": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q9": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q32": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q36": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q35": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q34": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q33": [
+            "categorical",
+            "few_categories"
+        ],
+        "Q15": [
+            "missing_values",
+            "categorical",
+            "many_categories"
+        ],
+        "Q16": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "Q14": [
+            "missing_values",
+            "categorical",
+            "many_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 45,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

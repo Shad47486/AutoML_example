@@ -1,0 +1,16 @@
+if (Q40_2 <= 13.5) and (Q40_1 <= 15.5) and (Q40_1 <= 6.0) then response: 6.647 | based on 17 samples
+
+if (Q40_2 > 13.5) and (Q40_2 <= 30.5) and (Q16 > 5.0) then response: 25.154 | based on 13 samples
+
+if (Q40_2 <= 13.5) and (Q40_1 <= 15.5) and (Q40_1 > 6.0) then response: 12.8 | based on 10 samples
+
+if (Q40_2 > 13.5) and (Q40_2 > 30.5) and (Q23 <= 3.5) then response: 32.333 | based on 3 samples
+
+if (Q40_2 <= 13.5) and (Q40_1 > 15.5) and (Q19 > 3.0) then response: 23.0 | based on 3 samples
+
+if (Q40_2 <= 13.5) and (Q40_1 > 15.5) and (Q19 <= 3.0) then response: 32.0 | based on 2 samples
+
+if (Q40_2 > 13.5) and (Q40_2 > 30.5) and (Q23 > 3.5) then response: 44.0 | based on 1 samples
+
+if (Q40_2 > 13.5) and (Q40_2 <= 30.5) and (Q16 <= 5.0) then response: 17.0 | based on 1 samples
+

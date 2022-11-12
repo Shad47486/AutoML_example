@@ -1,0 +1,762 @@
+{
+    "uid": "86e473fb-00c3-4e35-8adc-e8b52977a2b5",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Progress",
+                "Finished",
+                "UserLanguage",
+                "Q37",
+                "Q39",
+                "Q1_6_TEXT"
+            ],
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "Q10_1": 12.0,
+                        "Q10_2": 30.0,
+                        "Q10_3": 1.0,
+                        "Q44": "Audiologist",
+                        "Q32": "Never",
+                        "Q15": "No",
+                        "Q16": "The school that I worked in had mental health professional developments as well as days that we got out of work early for self-care. My current position in the private practice is a part-time position and there is no stress on self-care of mental health. ",
+                        "Q14": "Lack of ability to grow professionally and make financial gains. "
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Q1": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Q1.1": {
+                            "California": 0,
+                            "Connecticut": 1,
+                            "Florida": 2,
+                            "Indiana": 3,
+                            "Massachusetts": 4,
+                            "Nevada": 5,
+                            "New Jersey": 6,
+                            "New York": 7,
+                            "Oklahoma": 8,
+                            "Texas": 9,
+                            "Washington": 10
+                        },
+                        "Q3": {
+                            "Rural (population of less than 10k)": 0,
+                            "Suburban (population of 10k-50k)": 1,
+                            "Urban (population of 50k+)": 2
+                        },
+                        "Q4": {
+                            "Both": 0,
+                            "Educational": 1,
+                            "Medical": 2
+                        },
+                        "Q43": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "Q44": {
+                            "Acting": 0,
+                            "Advertising Account Executive": 1,
+                            "Arts Administration": 2,
+                            "Audiologist": 3,
+                            "ESL teacher": 4,
+                            "Elementary teacher": 5,
+                            "Fashion/ beauty ": 6,
+                            "High school mathematics teacher ": 7,
+                            "Marketing": 8,
+                            "OBGYN": 9,
+                            "PA": 10,
+                            "PT": 11,
+                            "Psychologist ": 12,
+                            "Psychology": 13,
+                            "Special Education - Bilingual/TESOL Education": 14,
+                            "Special Education 12:1:1 self contained teacher": 15,
+                            "Teacher ": 16,
+                            "pre-med": 17
+                        },
+                        "Q11": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q18": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q19": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q20": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q21": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q22": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a week": 4
+                        },
+                        "Q23": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q24": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q25": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a week": 4
+                        },
+                        "Q26": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q27": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q28": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q29": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q30": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q31": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q5": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q6": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q7": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q8": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q9": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q32": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q36": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q35": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q34": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q33": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q15": {
+                            "Although at times I do feel burnt out, I truly know that I have one of the greatest jobs in the world in which I am able to support students and families each day. I have not searched for mental health services, but there are days when I think other career choices would have been an easier way to go. Despite challenging days, weeks, or even some years in the field I am confident that I chose the right career path for me.": 0,
+                            "Burnout in school setting caused me to seek new position in medical setting": 1,
+                            "I am currently working in a private practice for the past year and before this I was in a school for 9 years. The burnout of a school made me switch populations. Being in a school is very draining for your mental health. ": 2,
+                            "I began treatment for anxiety two years into the pandemic and sought out employer-provided healthcare services (though I didn't find them particularly helpful).  I have considered additional certifications for a career change but costs are prohibitive.  I currently receive job alerts from a local university.": 3,
+                            "I have contemplated a career change in the past. ": 4,
+                            "I have not sought out mental health services": 5,
+                            "It has never been burnout - it was having or making opportunities to advance and learn more; thus, the career change was to work with different clients; settings; opportunities to learn and expand my knowledge and skills; ": 6,
+                            "I\u2019\u2019m not burned out yet, mostly because I have a unionized workplace.I used to work in non-union environments, private schools, charter schools, and our labor was excessively exploited. My union collectively bargains for our wages and working conditions, and so now, as of 2014, I get to take a duty-free, 50-minute lunch break, a 45-minute Prep period, and 45-min Admin period, for SESIS documentation, assessments and writing IEPs. The union makes all the difference. It\u2019s a question that should be included in the survey: union or non-union workplace? It makes a world of difference in quality of life on the job. UFT also provides us with PTO, we only work 180 days a year, which is not the case for private school SLPs, and contracted fee-for-service SLPs. Mental health with a Union to back us up is much more high quality. ": 7,
+                            "No": 8,
+                            "No ": 9,
+                            "Not a career change, because in reality I do feel \"stuck\" at times.  I have to pay my bills. I have sought out therapy. ": 10,
+                            "One of the reasons i took on more leadership and mentorship in the field (e.g., Clinical Director, CF and SLPA Mentor, Lead SLP) was because I became very emotionally and physically drained, had a hard time 'leaving work at the door.' Adopting a parent coaching approach also helped alleviate this.  ": 11,
+                            "Switching career contemplated for decades": 12,
+                            "Work stress related to having zero time to manage caseload responsibilities & plan/differentiate therapy for students with diverse speech-language needs during the school day, coupled with the responsibilities of daily life as a full-time working mother, and family loss/illness/tragedy leaves me feeling VERY overwhelmed.  Following the loss of my father, I found that I NEEDED to speak with someone about how overwhelmed I was feeling.  My job as an SLP in the schools doesn't leave much room for self-care.  At times, I suffer from burnout because I work as many hours outside of the school week as I do during the week.  Administrators only seem to care about our ability to provide direct service to students and do not acknowledge the legitimate need for SLPs to have time allotted in their school day to manage caseload responsibilities and plan lessons.  ": 13,
+                            "Would never switch Careers!! Love my job ": 14,
+                            "Yes I have sought therapy and I am currently trying to leave clinics work and search for other careers in IT ": 15,
+                            "Yes but services were not helpful. Have thought about getting into leadership to leave patient care.": 16,
+                            "Yes, I did seek out resources for my mental health. ": 17,
+                            "Yes, I got very burned out after 10yrs at a SPED school and so I switched to my current regular ed school. What burned me out was dealing with a terrible administrator. For three years at my current school I adored my administrator and felt no stress, despite covid. However, this year I have a new administrator who is really stressful so far and I\u2019m contemplating leaving because of her. My work doesn\u2019t stress me out, but my boss somehow does have the power to stress me out.": 18,
+                            "Yes, I receive counseling": 19,
+                            "Yes.  I have both applied for different jobs and looked into mental health services. I have not actually switched careers at this time. ": 20,
+                            "Yes. I am receiving therapy biweekly and consider a career change but feel daunted by this task. I have also considered decreasing hours at my current job. However, this may not be an option financially. ": 21,
+                            "Yes. I sought out mental health counseling for anxiety and depression that was exacerbated by my job. I currently see a therapist every other week to address my anxiety and work is often a related aspect of that. My counseling seeks to help me see myself as human, that I will make mistakes, and that I have to have limits. However, these are not yet tools I feel I implement effectively. For others, I am compassionate, but not for myself. I hold myself to a high standard and that is the cycle of my anxiety. ": 22,
+                            "Yes. I want to leave the field and am currently trying to save up as much money before making the switxch. ": 23,
+                            "Yes. No other jobs taken though.": 24,
+                            "Yes; mental health services helped me decide to change work settings. Mental heath services helped me set boundaries, ask for help, and communicate my workload challenges with my administration. Then I was able to make a change after I knew the work setting was the issue. I knew that taking action now would increase my chances of staying in the field instead of applying for other types of jobs. ": 25,
+                            "no": 26,
+                            "yes": 27
+                        },
+                        "Q16": {
+                            "A broken system that just keeps piling on more and more, never taking anything away": 0,
+                            "Although I have not worked in a medical setting, I completed an externship in a hospital during grad school. In that setting I liked feeling like I had more time dedicated to paperwork as needed (SOAP notes, etc.) However, in the school setting I find that there are many resources to support mental health that I did not have access to in the hospital. ": 1,
+                            "Because of my students' increased anxiety levels, I am drawn into more meetings to address these concerns.": 2,
+                            "CF YEAR was probably the most difficult experience of my career. Finding a good therapist helped!! Now that I\u2019m an SLP with C\u2019s everything is much more relaxed and I love it ": 3,
+                            "I feel that slps are rarely given thought. We aren\u2019t treated the same in the building. I feel that teachers are given more materials to use. ": 4,
+                            "I find that both work settings can tax one's mental health. In the end, I learned to have better boundaries. ": 5,
+                            "I have learned you must have a good work life balance to succeed at your job. ": 6,
+                            "I only have experience with one work setting.": 7,
+                            "Make sure you seek proper support and don't hold onto things.  ": 8,
+                            "Medical setting treat you more like robots, they care more about meeting the therapy cap than their workers. School settings tend to overload their SLP's with high caseload numbers and not enough time to get everything done, let alone provide effective therapy every session, burnout is very common and its not hard to see why": 9,
+                            "My mental health has not been affected, thankfully.": 10,
+                            "Our Union (UFT) offers free mental health counseling through UFT MAP. Non union union workplaces did not offer that. On the contrary, they drove us crazy, to the point of quitting.": 11,
+                            "The school setting has attempted to put things in place to help overall mental health but my busy schedule does not allow me to access the services.": 12,
+                            "The school that I worked in had mental health professional developments as well as days that we got out of work early for self-care. My current position in the private practice is a part-time position and there is no stress on self-care of mental health. ": 13,
+                            "They offer services and support groups at my educational setting and it\u2019s covered by insurance ": 14,
+                            "When working in a SNF there was a lack of support given that patients sometimes died suddenly or were moved to other facilities without a Farewell. Therapists become close with their clients, so this aspect was particularly hard for me. ": 15,
+                            "Working across settings - the one thing that helped me to feel supportive has been having a series of mentors. Also being involved as a volunteer in organizations helped to put things in perspective; Above all, being intentional about work-life balance helped me to maintain mental health; ": 16
+                        },
+                        "Q14": {
+                            "As SLPs in the schools, we are paid according to the teachers' salary scale; however, SLPs often fall into many gray areas and are not treated equitably.  We don't get an extra 45 minute prep per week like classroom teachers do (for planning), our caseloads are not capped at 25, we are expected to complete Medicaid log notes on our own time; yet, we are expected to pay for CEUs to maintain our licensure.   The inequities are numerous.  Teachers are provided with substitute coverage so that they can test their students' reading levels.  We are provided with a 1 hour testing slot for re-evaluation testing per week.  This is not nearly enough time to test a student for his/her re-eval, so we often pull students during our lunch or prep.  Teachers routinely attend various trainings/meetings where they are away from their class.  We don't even have dept. meetings during the school day because we are not supposed to cancel students' sessions.  It's very frustrating to feel like we're the underdog and no one really cares about fairness and how it impacts our mental health.": 0,
+                            "As a whole, SLPs are underpaid, given our level of education, CEU requirements, and what other meeical providers receive. I believe this is partially due to being a female-dominant discipline. ": 1,
+                            "Behavior my students are becoming much more demanding and emotional": 2,
+                            "Being a minority SLP providing bilingual or trilingual services has impacted how I navigate a work setting. I am often called upon to assist on special cases and I am asked more questions than my counterparts. That on top of having a large caseload, facing racial violence/discrimination, and cultural differences in the workplace have a huge lasting impact on my mental health when it comes to my work.": 3,
+                            "CF year I was taking home 20 hrs of work a week. It was miserable, but it\u2019s worth it to keep pushing because now I only work in office and go home and have a separate and more relaxed life ": 4,
+                            "Caseload numbers and large group sizes have an impact on the ability to provide effective therapy.": 5,
+                            "Colleagues that do not follow regulations and do not provide evidence based practices. ": 6,
+                            "Difficult parents and paperwork ": 7,
+                            "Hostile work environment and lack of concern/support from administration/HR": 8,
+                            "I (previously), not now, had an abusive administrator, in the NYCDOE, at a Bronx school. Despite us being unionized, bad administration is plentiful. Even if you\u2019re the best SLP, most inspiring and most empathetic, most pro-active, if Admin doesn\u2019t like you, they can still find ways to target you for termination. The UFT can help, but only so much. This can also be a factor in mental well-being: whether or not you have a good boss. This is a question that this survey should ask: \u201cDo you have a good, fair boss?\u201d It makes a big difference in mental health among SLPs.": 9,
+                            "I am in leadership and have to still see patients. All I do is deal with team members complaints and their mental health and they never consider mine. ": 10,
+                            "In school setting: lack of caseload cap ": 11,
+                            "In the hospital setting, we have to meet efficiency requirements as well as complete all of the other things that go along with being an SLP.  ": 12,
+                            "Lack of ability to grow professionally and make financial gains. ": 13,
+                            "Lack of administrative support or understanding of the role and responsibilities of a SLP has impacted job satisfaction; also lack of parent support was a factor; having colleagues that were not contributors or motivated to \"do the work\" is a factor in work-related stress (e.g. fell on the worker bees to carry the load)": 14,
+                            "Lack of staff": 15,
+                            "Lack of training in each setting ": 16,
+                            "Management support.": 17,
+                            "Not enough time during the school day to complete necessary paperwork.  Too much emphasis by administration on caseload, rather than overall workload.": 18,
+                            "Other professionals who do not do their job and I have to patch it up. Other SLPs who have left compliance mistakes and issues I have to fix. Inequity of caseload distribution. Professionals who are not trained in basic classroom supports and I have to spend time documenting and training them. ": 19,
+                            "Physician distrust, Management, okie leadership, poor staffing, racism in healthcare, bias in healthcare, other disciplines stepping in SLP scope of practice, ": 20,
+                            "Pressure of \u201cfixing\u201d things, imposter syndrome, compassion fatigue, productivity standards. ": 21,
+                            "So much less money per hour than physical therapy. Other professionals making more per hour than us.": 22,
+                            "Student absences on one hand causes relief for large caseload, but mostly, it makes it so hard to make progress that kids are staying on caseload longer. when they don't make progress (because of absences), it's not satisfying and makes me sad. The student population I work with is low income, struggling to afford to live in the area. A lot of kids coming into Kinder w/ no early intervention services, not enough quality language stimulation, that it can be sad/emotionally draining to be at work sometimes. ": 23,
+                            "productivity standards, being overloaded with paperwork and deadlines with so many demands on one person. ": 24,
+                            "reduced staff and ability to recruit qualified individuals to fill key positions": 25,
+                            "too many responsibilities. ": 26
+                        }
+                    },
+                    "columns": [
+                        "Q1",
+                        "Q1.1",
+                        "Q3",
+                        "Q4",
+                        "Q43",
+                        "Q44",
+                        "Q11",
+                        "Q18",
+                        "Q19",
+                        "Q20",
+                        "Q21",
+                        "Q22",
+                        "Q23",
+                        "Q24",
+                        "Q25",
+                        "Q26",
+                        "Q27",
+                        "Q28",
+                        "Q29",
+                        "Q30",
+                        "Q31",
+                        "Q5",
+                        "Q6",
+                        "Q7",
+                        "Q8",
+                        "Q9",
+                        "Q32",
+                        "Q36",
+                        "Q35",
+                        "Q34",
+                        "Q33",
+                        "Q15",
+                        "Q16",
+                        "Q14"
+                    ]
+                }
+            ],
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Progress": [
+                        "remove_column"
+                    ],
+                    "Finished": [
+                        "remove_column"
+                    ],
+                    "UserLanguage": [
+                        "remove_column"
+                    ],
+                    "Q37": [
+                        "remove_column"
+                    ],
+                    "Q39": [
+                        "remove_column"
+                    ],
+                    "Q1": [
+                        "categorical_to_int"
+                    ],
+                    "Q1_6_TEXT": [
+                        "remove_column"
+                    ],
+                    "Q1.1": [
+                        "categorical_to_int"
+                    ],
+                    "Q3": [
+                        "categorical_to_int"
+                    ],
+                    "Q4": [
+                        "categorical_to_int"
+                    ],
+                    "Q10_1": [
+                        "na_fill_median"
+                    ],
+                    "Q10_2": [
+                        "na_fill_median"
+                    ],
+                    "Q10_3": [
+                        "na_fill_median"
+                    ],
+                    "Q43": [
+                        "categorical_to_int"
+                    ],
+                    "Q44": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "Q11": [
+                        "categorical_to_int"
+                    ],
+                    "Q18": [
+                        "categorical_to_int"
+                    ],
+                    "Q19": [
+                        "categorical_to_int"
+                    ],
+                    "Q20": [
+                        "categorical_to_int"
+                    ],
+                    "Q21": [
+                        "categorical_to_int"
+                    ],
+                    "Q22": [
+                        "categorical_to_int"
+                    ],
+                    "Q23": [
+                        "categorical_to_int"
+                    ],
+                    "Q24": [
+                        "categorical_to_int"
+                    ],
+                    "Q25": [
+                        "categorical_to_int"
+                    ],
+                    "Q26": [
+                        "categorical_to_int"
+                    ],
+                    "Q27": [
+                        "categorical_to_int"
+                    ],
+                    "Q28": [
+                        "categorical_to_int"
+                    ],
+                    "Q29": [
+                        "categorical_to_int"
+                    ],
+                    "Q30": [
+                        "categorical_to_int"
+                    ],
+                    "Q31": [
+                        "categorical_to_int"
+                    ],
+                    "Q5": [
+                        "categorical_to_int"
+                    ],
+                    "Q6": [
+                        "categorical_to_int"
+                    ],
+                    "Q7": [
+                        "categorical_to_int"
+                    ],
+                    "Q8": [
+                        "categorical_to_int"
+                    ],
+                    "Q9": [
+                        "categorical_to_int"
+                    ],
+                    "Q32": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "Q36": [
+                        "categorical_to_int"
+                    ],
+                    "Q35": [
+                        "categorical_to_int"
+                    ],
+                    "Q34": [
+                        "categorical_to_int"
+                    ],
+                    "Q33": [
+                        "categorical_to_int"
+                    ],
+                    "Q15": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "Q16": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "Q14": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "14864117-894d-4665-aba5-d4ae97968f56",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "mse",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Progress": [
+                    "remove_column"
+                ],
+                "Finished": [
+                    "remove_column"
+                ],
+                "UserLanguage": [
+                    "remove_column"
+                ],
+                "Q37": [
+                    "remove_column"
+                ],
+                "Q39": [
+                    "remove_column"
+                ],
+                "Q1": [
+                    "categorical_to_int"
+                ],
+                "Q1_6_TEXT": [
+                    "remove_column"
+                ],
+                "Q1.1": [
+                    "categorical_to_int"
+                ],
+                "Q3": [
+                    "categorical_to_int"
+                ],
+                "Q4": [
+                    "categorical_to_int"
+                ],
+                "Q10_1": [
+                    "na_fill_median"
+                ],
+                "Q10_2": [
+                    "na_fill_median"
+                ],
+                "Q10_3": [
+                    "na_fill_median"
+                ],
+                "Q43": [
+                    "categorical_to_int"
+                ],
+                "Q44": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "Q11": [
+                    "categorical_to_int"
+                ],
+                "Q18": [
+                    "categorical_to_int"
+                ],
+                "Q19": [
+                    "categorical_to_int"
+                ],
+                "Q20": [
+                    "categorical_to_int"
+                ],
+                "Q21": [
+                    "categorical_to_int"
+                ],
+                "Q22": [
+                    "categorical_to_int"
+                ],
+                "Q23": [
+                    "categorical_to_int"
+                ],
+                "Q24": [
+                    "categorical_to_int"
+                ],
+                "Q25": [
+                    "categorical_to_int"
+                ],
+                "Q26": [
+                    "categorical_to_int"
+                ],
+                "Q27": [
+                    "categorical_to_int"
+                ],
+                "Q28": [
+                    "categorical_to_int"
+                ],
+                "Q29": [
+                    "categorical_to_int"
+                ],
+                "Q30": [
+                    "categorical_to_int"
+                ],
+                "Q31": [
+                    "categorical_to_int"
+                ],
+                "Q5": [
+                    "categorical_to_int"
+                ],
+                "Q6": [
+                    "categorical_to_int"
+                ],
+                "Q7": [
+                    "categorical_to_int"
+                ],
+                "Q8": [
+                    "categorical_to_int"
+                ],
+                "Q9": [
+                    "categorical_to_int"
+                ],
+                "Q32": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "Q36": [
+                    "categorical_to_int"
+                ],
+                "Q35": [
+                    "categorical_to_int"
+                ],
+                "Q34": [
+                    "categorical_to_int"
+                ],
+                "Q33": [
+                    "categorical_to_int"
+                ],
+                "Q15": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "Q16": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "Q14": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "Regressional\\X.data",
+            "y_path": "Regressional\\y.data",
+            "results_path": "Regressional"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "mse",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree\\learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 5.26958234737199,
+    "train_time": 10.572380304336548,
+    "is_stacked": false
+}

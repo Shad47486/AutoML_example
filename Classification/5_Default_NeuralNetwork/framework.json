@@ -1,0 +1,1115 @@
+{
+    "uid": "51e07775-a898-4355-9a37-354ef944bd69",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Progress",
+                "Finished",
+                "UserLanguage",
+                "Q37",
+                "Q39",
+                "Q1_6_TEXT"
+            ],
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "Q10_1": "0",
+                        "Q10_2": "0",
+                        "Q10_3": "0",
+                        "Q44": "Teacher ",
+                        "Q32": "A few times per month",
+                        "Q15": "No",
+                        "Q16": "My mental health has not been affected, thankfully.",
+                        "Q14": "Physician distrust, Management, okie leadership, poor staffing, racism in healthcare, bias in healthcare, other disciplines stepping in SLP scope of practice, "
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Q1": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Q1.1": {
+                            "California": 0,
+                            "Colorado": 1,
+                            "Florida": 2,
+                            "Indiana": 3,
+                            "New Jersey": 4,
+                            "New York": 5,
+                            "Ohio": 6,
+                            "Oklahoma": 7,
+                            "Texas": 8
+                        },
+                        "Q3": {
+                            "Rural (population of less than 10k)": 0,
+                            "Suburban (population of 10k-50k)": 1,
+                            "Urban (population of 50k+)": 2
+                        },
+                        "Q4": {
+                            "Both": 0,
+                            "Educational": 1,
+                            "Medical": 2
+                        },
+                        "Q10_1": {
+                            "0": 0,
+                            "10": 1,
+                            "13": 2,
+                            "15": 3,
+                            "30": 4,
+                            "37": 5,
+                            "4": 6,
+                            "40": 7,
+                            "42": 8,
+                            "5": 9,
+                            "53": 10,
+                            "6": 11,
+                            "8": 12
+                        },
+                        "Q10_2": {
+                            "0": 0,
+                            "10": 1,
+                            "15": 2,
+                            "17": 3,
+                            "18": 4,
+                            "2": 5,
+                            "20": 6,
+                            "25": 7,
+                            "28": 8,
+                            "30": 9,
+                            "32": 10,
+                            "35": 11,
+                            "39": 12,
+                            "40": 13,
+                            "45": 14,
+                            "50": 15,
+                            "60": 16
+                        },
+                        "Q10_3": {
+                            "0": 0,
+                            "1": 1,
+                            "18": 2,
+                            "2": 3,
+                            "4": 4,
+                            "60": 5
+                        },
+                        "Q40_1": {
+                            "0": 0,
+                            "1": 1,
+                            "10": 2,
+                            "11": 3,
+                            "12": 4,
+                            "13": 5,
+                            "15": 6,
+                            "18": 7,
+                            "2": 8,
+                            "20": 9,
+                            "24": 10,
+                            "26": 11,
+                            "3": 12,
+                            "4": 13,
+                            "5": 14,
+                            "6": 15,
+                            "7": 16
+                        },
+                        "Q40_2": {
+                            "0": 0,
+                            "1": 1,
+                            "10": 2,
+                            "11": 3,
+                            "12": 4,
+                            "14": 5,
+                            "15": 6,
+                            "17": 7,
+                            "19": 8,
+                            "2": 9,
+                            "20": 10,
+                            "22": 11,
+                            "23": 12,
+                            "28": 13,
+                            "3": 14,
+                            "32": 15,
+                            "33": 16,
+                            "4": 17,
+                            "5": 18,
+                            "7": 19
+                        },
+                        "Q_40_3": {
+                            "0": 0,
+                            "10": 1,
+                            "11": 2,
+                            "12": 3,
+                            "13": 4,
+                            "14": 5,
+                            "15": 6,
+                            "18": 7,
+                            "2": 8,
+                            "20": 9,
+                            "22": 10,
+                            "23": 11,
+                            "24": 12,
+                            "25": 13,
+                            "26": 14,
+                            "27": 15,
+                            "28": 16,
+                            "30": 17,
+                            "32": 18,
+                            "33": 19,
+                            "4": 20,
+                            "5": 21,
+                            "7": 22,
+                            "8": 23
+                        },
+                        "Q44": {
+                            "Acting": 0,
+                            "Advertising Account Executive": 1,
+                            "ESL teacher": 2,
+                            "High school mathematics teacher ": 3,
+                            "Math Education; Psychology": 4,
+                            "OBGYN": 5,
+                            "PA": 6,
+                            "Psychologist ": 7,
+                            "Psychology": 8,
+                            "Special Education 12:1:1 self contained teacher": 9,
+                            "Teacher ": 10,
+                            "pre-med": 11
+                        },
+                        "Q11": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q18": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q19": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q20": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q21": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q22": {
+                            "A few times per year": 0,
+                            "Never": 1,
+                            "Once a month": 2,
+                            "Once a week": 3
+                        },
+                        "Q23": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q24": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q25": {
+                            "A few times per month": 0,
+                            "A few times per year": 1,
+                            "Never": 2,
+                            "Once a month": 3
+                        },
+                        "Q26": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Never": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q27": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q28": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "Every day": 2,
+                            "Once a month": 3,
+                            "Once a week": 4
+                        },
+                        "Q29": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "Every day": 2,
+                            "Once a month": 3,
+                            "Once a week": 4
+                        },
+                        "Q30": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4
+                        },
+                        "Q31": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Once a month": 4,
+                            "Once a week": 5
+                        },
+                        "Q5": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q6": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q7": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q8": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q9": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q32": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q36": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q35": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5,
+                            "Once a week": 6
+                        },
+                        "Q34": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5
+                        },
+                        "Q33": {
+                            "A few times per month": 0,
+                            "A few times per week": 1,
+                            "A few times per year": 2,
+                            "Every day": 3,
+                            "Never": 4,
+                            "Once a month": 5
+                        },
+                        "Q15": {
+                            "Although at times I do feel burnt out, I truly know that I have one of the greatest jobs in the world in which I am able to support students and families each day. I have not searched for mental health services, but there are days when I think other career choices would have been an easier way to go. Despite challenging days, weeks, or even some years in the field I am confident that I chose the right career path for me.": 0,
+                            "Burnout in school setting caused me to seek new position in medical setting": 1,
+                            "I am currently working in a private practice for the past year and before this I was in a school for 9 years. The burnout of a school made me switch populations. Being in a school is very draining for your mental health. ": 2,
+                            "I have not sought out mental health services": 3,
+                            "I spend about 1-2 looking at current job postings, but do not apply": 4,
+                            "I\u2019\u2019m not burned out yet, mostly because I have a unionized workplace.I used to work in non-union environments, private schools, charter schools, and our labor was excessively exploited. My union collectively bargains for our wages and working conditions, and so now, as of 2014, I get to take a duty-free, 50-minute lunch break, a 45-minute Prep period, and 45-min Admin period, for SESIS documentation, assessments and writing IEPs. The union makes all the difference. It\u2019s a question that should be included in the survey: union or non-union workplace? It makes a world of difference in quality of life on the job. UFT also provides us with PTO, we only work 180 days a year, which is not the case for private school SLPs, and contracted fee-for-service SLPs. Mental health with a Union to back us up is much more high quality. ": 5,
+                            "No": 6,
+                            "No ": 7,
+                            "No but it did prompt me to take an almost 2 week vacation and I have cut back on a bunch of voluntary work projects and cut back on working from home": 8,
+                            "One of the reasons i took on more leadership and mentorship in the field (e.g., Clinical Director, CF and SLPA Mentor, Lead SLP) was because I became very emotionally and physically drained, had a hard time 'leaving work at the door.' Adopting a parent coaching approach also helped alleviate this.  ": 9,
+                            "Staff shortage and refusal to hire more": 10,
+                            "Switching career contemplated for decades": 11,
+                            "Work stress related to having zero time to manage caseload responsibilities & plan/differentiate therapy for students with diverse speech-language needs during the school day, coupled with the responsibilities of daily life as a full-time working mother, and family loss/illness/tragedy leaves me feeling VERY overwhelmed.  Following the loss of my father, I found that I NEEDED to speak with someone about how overwhelmed I was feeling.  My job as an SLP in the schools doesn't leave much room for self-care.  At times, I suffer from burnout because I work as many hours outside of the school week as I do during the week.  Administrators only seem to care about our ability to provide direct service to students and do not acknowledge the legitimate need for SLPs to have time allotted in their school day to manage caseload responsibilities and plan lessons.  ": 12,
+                            "Would never switch Careers!! Love my job ": 13,
+                            "Yes I have sought therapy and I am currently trying to leave clinics work and search for other careers in IT ": 14,
+                            "Yes but services were not helpful. Have thought about getting into leadership to leave patient care.": 15,
+                            "Yes, I considered a location/setting change but did not follow through due to worries about financial insecurity and mental health security related to moving to a place without family/friend support there.": 16,
+                            "Yes, I got very burned out after 10yrs at a SPED school and so I switched to my current regular ed school. What burned me out was dealing with a terrible administrator. For three years at my current school I adored my administrator and felt no stress, despite covid. However, this year I have a new administrator who is really stressful so far and I\u2019m contemplating leaving because of her. My work doesn\u2019t stress me out, but my boss somehow does have the power to stress me out.": 17,
+                            "Yes, both. I considered a career change multiple times in the past several years. I took classes in the tech field, changed my resume and spoke with someone about transitioning from the medical field into the tech field. I also received mental health services shortly after working in-person through the first wave of Covid following severe, consistent panic attacks at work and at home which helped immensely. ": 18,
+                            "Yes, mental health services helped me to decide to decrease my hours per week at work in October 2020. I have maintained those hours which has helped my stress levels. The downside is less pay but happiness is more important than money. ": 19,
+                            "Yes. I am receiving therapy biweekly and consider a career change but feel daunted by this task. I have also considered decreasing hours at my current job. However, this may not be an option financially. ": 20,
+                            "Yes. I sought out mental health counseling for anxiety and depression that was exacerbated by my job. I currently see a therapist every other week to address my anxiety and work is often a related aspect of that. My counseling seeks to help me see myself as human, that I will make mistakes, and that I have to have limits. However, these are not yet tools I feel I implement effectively. For others, I am compassionate, but not for myself. I hold myself to a high standard and that is the cycle of my anxiety. ": 21,
+                            "no": 22
+                        },
+                        "Q16": {
+                            "A broken system that just keeps piling on more and more, never taking anything away": 0,
+                            "Although I have not worked in a medical setting, I completed an externship in a hospital during grad school. In that setting I liked feeling like I had more time dedicated to paperwork as needed (SOAP notes, etc.) However, in the school setting I find that there are many resources to support mental health that I did not have access to in the hospital. ": 1,
+                            "CF YEAR was probably the most difficult experience of my career. Finding a good therapist helped!! Now that I\u2019m an SLP with C\u2019s everything is much more relaxed and I love it ": 2,
+                            "I have worked in both medical and educational settings in different facilities and my experiences have shown a commonality in speech-language pathology - productivity and patient retention matter more than the therapist providing the services, saying 'No' is implicitly frowned upon, setting boundaries is looked at as mutiny, and administration forgets their employees are human beings.": 3,
+                            "Make sure you seek proper support and don't hold onto things.  ": 4,
+                            "Mental health is not a concern of any administration in the health field I've worked for. It is wholly the employee's responsibility whether your work environment and burn-out contribute to it or not.": 5,
+                            "Most of my career has been in the Practice Practice setting in which I feel being surrounded by other SLPs has been a huge benefit to mental health.": 6,
+                            "My mental health has not been affected, thankfully.": 7,
+                            "Our Union (UFT) offers free mental health counseling through UFT MAP. Non union union workplaces did not offer that. On the contrary, they drove us crazy, to the point of quitting.": 8,
+                            "The school that I worked in had mental health professional developments as well as days that we got out of work early for self-care. My current position in the private practice is a part-time position and there is no stress on self-care of mental health. ": 9,
+                            "They offer services and support groups at my educational setting and it\u2019s covered by insurance ": 10,
+                            "When working in a SNF there was a lack of support given that patients sometimes died suddenly or were moved to other facilities without a Farewell. Therapists become close with their clients, so this aspect was particularly hard for me. ": 11
+                        },
+                        "Q14": {
+                            "Arbitrary rules, an increase in responsibility that was not equally reflected monetarily, a mindset of 'when I say 'jump,' you say 'how high?', and a lack of communication from management that comes across as reckless disregard. The company culture here lacks genuine support with no acknowlegement or resources of mental health issues related to being a healthcare worker, pre- and post-pandemic.": 0,
+                            "As SLPs in the schools, we are paid according to the teachers' salary scale; however, SLPs often fall into many gray areas and are not treated equitably.  We don't get an extra 45 minute prep per week like classroom teachers do (for planning), our caseloads are not capped at 25, we are expected to complete Medicaid log notes on our own time; yet, we are expected to pay for CEUs to maintain our licensure.   The inequities are numerous.  Teachers are provided with substitute coverage so that they can test their students' reading levels.  We are provided with a 1 hour testing slot for re-evaluation testing per week.  This is not nearly enough time to test a student for his/her re-eval, so we often pull students during our lunch or prep.  Teachers routinely attend various trainings/meetings where they are away from their class.  We don't even have dept. meetings during the school day because we are not supposed to cancel students' sessions.  It's very frustrating to feel like we're the underdog and no one really cares about fairness and how it impacts our mental health.": 1,
+                            "As a whole, SLPs are underpaid, given our level of education, CEU requirements, and what other meeical providers receive. I believe this is partially due to being a female-dominant discipline. ": 2,
+                            "Being forced to work through a global pandemic with no regard for my safety and well-being from my superiors, hostile work environment, productivity expectations, extensive paperwork expectations.": 3,
+                            "CF year I was taking home 20 hrs of work a week. It was miserable, but it\u2019s worth it to keep pushing because now I only work in office and go home and have a separate and more relaxed life ": 4,
+                            "Colleagues that do not follow regulations and do not provide evidence based practices. ": 5,
+                            "Difficult parents and paperwork ": 6,
+                            "I (previously), not now, had an abusive administrator, in the NYCDOE, at a Bronx school. Despite us being unionized, bad administration is plentiful. Even if you\u2019re the best SLP, most inspiring and most empathetic, most pro-active, if Admin doesn\u2019t like you, they can still find ways to target you for termination. The UFT can help, but only so much. This can also be a factor in mental well-being: whether or not you have a good boss. This is a question that this survey should ask: \u201cDo you have a good, fair boss?\u201d It makes a big difference in mental health among SLPs.": 7,
+                            "I am in leadership and have to still see patients. All I do is deal with team members complaints and their mental health and they never consider mine. ": 8,
+                            "I work at a school and often feel a lack of support from my special education department. My boss is the director of special education and she has no time to meet with my directly. I am mostly a free agent doing whatever I want at work. This has many pros and cons, the cons being when workload gets too high there is no one who seems to care to support me. Concerns often seem to fall on deaf ears if I can even find a time for anyone to meet with me. The special education department has a lot of turnover which means that new employees need much more support than seasoned ones and I\u2019m expected to just keep doing what I\u2019m doing even if there are many workload issues that lead to me not being able to provide the best services for my students. ": 9,
+                            "In school setting: lack of caseload cap ": 10,
+                            "Lack of staff": 11,
+                            "Management support.": 12,
+                            "My job has implemented Stress First Aid (SFA) to optimize colleagues mental health on a daily basis. ": 13,
+                            "Other professionals who do not do their job and I have to patch it up. Other SLPs who have left compliance mistakes and issues I have to fix. Inequity of caseload distribution. Professionals who are not trained in basic classroom supports and I have to spend time documenting and training them. ": 14,
+                            "Pay": 15,
+                            "Physician distrust, Management, okie leadership, poor staffing, racism in healthcare, bias in healthcare, other disciplines stepping in SLP scope of practice, ": 16,
+                            "Pressure of \u201cfixing\u201d things, imposter syndrome, compassion fatigue, productivity standards. ": 17,
+                            "Side projects away from direct patient care such as supervising graduate practicum students, mentoring an undergraduate student, presenting a couple of CEUs to my staff, receiving an Asha grant to start a new program and preparing for our convention presentation, serving on practice teams, etc have led me to realize I\u2019m doing way too much and working 4 10-hour days significantly cuts into my personal time. I\u2019m trying to find a better balance so that my entire life doesn\u2019t revolve around speech pathology. ": 18,
+                            "The support of other medical providers to allow for a multidisciplinary approach.": 19,
+                            "Time: we need more time and less meetings, more time to call parents ": 20
+                        }
+                    },
+                    "columns": [
+                        "Q1",
+                        "Q1.1",
+                        "Q3",
+                        "Q4",
+                        "Q10_1",
+                        "Q10_2",
+                        "Q10_3",
+                        "Q40_1",
+                        "Q40_2",
+                        "Q_40_3",
+                        "Q44",
+                        "Q11",
+                        "Q18",
+                        "Q19",
+                        "Q20",
+                        "Q21",
+                        "Q22",
+                        "Q23",
+                        "Q24",
+                        "Q25",
+                        "Q26",
+                        "Q27",
+                        "Q28",
+                        "Q29",
+                        "Q30",
+                        "Q31",
+                        "Q5",
+                        "Q6",
+                        "Q7",
+                        "Q8",
+                        "Q9",
+                        "Q32",
+                        "Q36",
+                        "Q35",
+                        "Q34",
+                        "Q33",
+                        "Q15",
+                        "Q16",
+                        "Q14"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.15806189751202507,
+                        1.6426274233894327,
+                        0.5229763603684907,
+                        0.7142763219068778,
+                        3.7757661813743524,
+                        5.382172828180059,
+                        1.1955428950640787,
+                        5.8550314960600645,
+                        6.731929081995963,
+                        7.1178674346943955,
+                        2.827032092787224,
+                        1.4418375302061077,
+                        1.4491149898404916,
+                        1.7019924897719065,
+                        1.5613679330911108,
+                        1.1432562466465617,
+                        0.5991446895152781,
+                        1.7364105593166166,
+                        1.6127369429247576,
+                        0.6196433832612601,
+                        0.7994080650317893,
+                        1.427171287187256,
+                        0.9259215428342454,
+                        0.826898230594723,
+                        1.079362316915343,
+                        1.129370027976679,
+                        1.8877089558262525,
+                        1.7886338488815678,
+                        1.8645804064305482,
+                        1.7386808726322756,
+                        1.8181638873062398,
+                        1.8803807299793955,
+                        1.936873586463719,
+                        1.7054655536734245,
+                        1.625729998374088,
+                        1.1705345856936746,
+                        6.003067372849628,
+                        2.036162225240187,
+                        5.356335996343016
+                    ],
+                    "mean": [
+                        0.02564102564102564,
+                        4.384615384615385,
+                        1.3333333333333333,
+                        1.0512820512820513,
+                        3.0,
+                        4.487179487179487,
+                        0.5128205128205128,
+                        5.9743589743589745,
+                        8.256410256410257,
+                        12.282051282051283,
+                        8.538461538461538,
+                        1.8461538461538463,
+                        2.282051282051282,
+                        3.0256410256410255,
+                        3.1538461538461537,
+                        2.358974358974359,
+                        1.0,
+                        2.5641025641025643,
+                        2.58974358974359,
+                        1.641025641025641,
+                        2.769230769230769,
+                        2.41025641025641,
+                        1.7435897435897436,
+                        1.6666666666666667,
+                        2.41025641025641,
+                        2.5128205128205128,
+                        2.641025641025641,
+                        2.923076923076923,
+                        2.4358974358974357,
+                        2.948717948717949,
+                        2.769230769230769,
+                        1.2820512820512822,
+                        2.3076923076923075,
+                        2.7435897435897436,
+                        2.1538461538461537,
+                        2.41025641025641,
+                        9.58974358974359,
+                        6.538461538461538,
+                        12.76923076923077
+                    ],
+                    "var": [
+                        0.024983563445101917,
+                        2.6982248520710064,
+                        0.2735042735042735,
+                        0.5101906640368178,
+                        14.256410256410257,
+                        28.96778435239974,
+                        1.4293228139381988,
+                        34.28139381985535,
+                        45.31886916502301,
+                        50.66403681788297,
+                        7.992110453648913,
+                        2.0788954635108485,
+                        2.099934253780408,
+                        2.8967784352399732,
+                        2.4378698224852076,
+                        1.3070348454963838,
+                        0.358974358974359,
+                        3.0151216305062456,
+                        2.6009204470742926,
+                        0.3839579224194609,
+                        0.6390532544378695,
+                        2.0368178829717287,
+                        0.8573307034845493,
+                        0.6837606837606837,
+                        1.1650230111768571,
+                        1.2754766600920446,
+                        3.5634451019066407,
+                        3.1992110453648914,
+                        3.476660092044708,
+                        3.023011176857331,
+                        3.305719921104537,
+                        3.535831689677844,
+                        3.7514792899408294,
+                        2.9086127547666005,
+                        2.6429980276134124,
+                        1.3701512163050624,
+                        36.03681788297173,
+                        4.14595660749507,
+                        28.690335305719927
+                    ],
+                    "n_samples_seen": 39,
+                    "n_features_in": 39,
+                    "columns": [
+                        "Q1",
+                        "Q1.1",
+                        "Q3",
+                        "Q4",
+                        "Q10_1",
+                        "Q10_2",
+                        "Q10_3",
+                        "Q40_1",
+                        "Q40_2",
+                        "Q_40_3",
+                        "Q44",
+                        "Q11",
+                        "Q18",
+                        "Q19",
+                        "Q20",
+                        "Q21",
+                        "Q22",
+                        "Q23",
+                        "Q24",
+                        "Q25",
+                        "Q26",
+                        "Q27",
+                        "Q28",
+                        "Q29",
+                        "Q30",
+                        "Q31",
+                        "Q5",
+                        "Q6",
+                        "Q7",
+                        "Q8",
+                        "Q9",
+                        "Q32",
+                        "Q36",
+                        "Q35",
+                        "Q34",
+                        "Q33",
+                        "Q15",
+                        "Q16",
+                        "Q14"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "0": 0,
+                "1": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Progress": [
+                        "remove_column"
+                    ],
+                    "Finished": [
+                        "remove_column"
+                    ],
+                    "UserLanguage": [
+                        "remove_column"
+                    ],
+                    "Q37": [
+                        "remove_column"
+                    ],
+                    "Q39": [
+                        "remove_column"
+                    ],
+                    "Q1": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q1_6_TEXT": [
+                        "remove_column"
+                    ],
+                    "Q1.1": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q3": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q4": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q10_1": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q10_2": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q10_3": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q40_1": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q40_2": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q_40_3": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q44": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q11": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q18": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q19": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q20": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q21": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q22": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q23": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q24": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q25": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q26": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q27": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q28": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q29": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q30": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q31": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q5": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q6": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q7": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q8": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q9": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q32": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q36": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q35": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q34": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q33": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q15": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q16": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Q14": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "4039ee76-4006-4c3f-9a42-bc90419d5f6c",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Progress": [
+                    "remove_column"
+                ],
+                "Finished": [
+                    "remove_column"
+                ],
+                "UserLanguage": [
+                    "remove_column"
+                ],
+                "Q37": [
+                    "remove_column"
+                ],
+                "Q39": [
+                    "remove_column"
+                ],
+                "Q1": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q1_6_TEXT": [
+                    "remove_column"
+                ],
+                "Q1.1": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q3": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q4": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q10_1": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q10_2": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q10_3": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q40_1": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q40_2": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q_40_3": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q44": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q11": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q18": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q19": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q20": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q21": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q22": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q23": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q24": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q25": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q26": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q27": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q28": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q29": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q30": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q31": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q5": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q6": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q7": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q8": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q9": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q32": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q36": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q35": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q34": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q33": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q15": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q16": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Q14": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "Classification\\X.data",
+            "y_path": "Classification\\y.data",
+            "results_path": "Classification"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.7818393827996715,
+    "train_time": 1.3102943897247314,
+    "is_stacked": false,
+    "threshold": 0.6981986793927992
+}

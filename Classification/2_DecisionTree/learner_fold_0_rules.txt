@@ -1,0 +1,10 @@
+if (Q44 > 9.5) and (Q23 <= 5.5) and (Q32 <= 5.5) then class: 0 (proba: 100.0%) | based on 23 samples
+
+if (Q44 <= 9.5) then class: 1 (proba: 100.0%) | based on 11 samples
+
+if (Q44 > 9.5) and (Q23 > 5.5) and (Q40_1 > 5.0) then class: 1 (proba: 100.0%) | based on 3 samples
+
+if (Q44 > 9.5) and (Q23 > 5.5) and (Q40_1 <= 5.0) then class: 0 (proba: 100.0%) | based on 1 samples
+
+if (Q44 > 9.5) and (Q23 <= 5.5) and (Q32 > 5.5) then class: 1 (proba: 100.0%) | based on 1 samples
+
